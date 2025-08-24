@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Devices Database{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3><i class="fas fa-sign-in-alt me-2"></i>Login to Devices Database</h3>
+            </div>
+            <div class="card-body text-center">
+                <p class="text-muted mb-4">Please sign in with your Microsoft O365 account to access the devices database.</p>
+                <a href="{{ url_for('microsoft_auth') }}" class="btn btn-primary btn-lg">
+                    <i class="fab fa-microsoft me-2"></i>Sign in with Microsoft
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+        <div class="alert alert-info">
+            <h5><i class="fas fa-info-circle me-2"></i>About This Application</h5>
+            <p class="mb-0">This application provides secure access to the devices database. You need to authenticate with Microsoft O365 OAuth2 to view and manage device information stored in the Excel file.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
